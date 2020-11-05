@@ -1,3 +1,5 @@
+/*Tarea online 1 - PSP - Víctor Pareja Ramírez*/
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,7 +26,6 @@ public class Suministrador {
         while (iterationTimes <= 15) {
             try {
                 raf = new RandomAccessFile(file, "rwd");
-                // Sección crítica
                 fileLock = raf.getChannel().lock();
                 if (raf.length() == 0 || raf.readInt() == 0) {
                     System.out.println("Suministrador: Escribe");
